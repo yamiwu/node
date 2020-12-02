@@ -3,7 +3,7 @@ var stdin = process.stdin;
 var stdout = process.stdout;
 
 fs.readdir(process.cwd(), (err, files) => {
-  console.log('__dirname', __dirname, files.length);
+  console.log('__dirname', __dirname, process.cwd());
   if (!files.length) {
     return console.log(' \033[31m No files to show!\003[39m\n');
   }
