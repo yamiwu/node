@@ -1,0 +1,27 @@
+doctype html 5
+html
+  head
+    title MongoDB exmple
+  body
+    h1 My first MongoDB app 
+    hr
+    if (signupEmail)
+      p Congratulations on signing up! Please login below!
+      input(name="user[email]", type="text", value=signupEmail)
+      a(href='/login') Go to Login
+    else
+      form(action="/login", method="POST")
+        fieldset
+          legend Log in
+          p
+            label Email
+            input(name="user[email]", type="text")
+          p
+            label Password
+            input(name="user[password]", type="password")
+          p
+            button Submit
+          p
+            a(href="/") Go Back
+
+
